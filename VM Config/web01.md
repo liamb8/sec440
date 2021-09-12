@@ -10,7 +10,7 @@ Open `/etc/pam.d/sshd` with sudo privileges, and add the following lines to the 
 File: /etc/ssh/sshd_config
 
 ##### This line already exists in the file, and should be changed from 'no' to 'yes'
-ChallengeResponseAuthentication yes
+`ChallengeResponseAuthentication yes`
 
 ...
 
