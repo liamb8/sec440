@@ -2,21 +2,25 @@ SSH Config:
 
 File: /etc/pam.d/sshd
 
-auth    required      pam_unix.so     no_warn try_first_pass
-auth    required      pam_google_authenticator.so
+`auth    required      pam_unix.so     no_warn try_first_pass`
+`auth    required      pam_google_authenticator.so`
 
 
 
 File: /etc/ssh/sshd_config
 
-# This line already exists in the file, and should be changed from 'no' to 'yes'
+##### This line already exists in the file, and should be changed from 'no' to 'yes'
 ChallengeResponseAuthentication yes
 
 ...
 
-# These lines should be added to the end of the file
-Match User example-user
-    AuthenticationMethods keyboard-interactive
+##### These lines should be added to the end of the file.
+
+Replace example-user with a system user.
+
+`Match User example-user`
+
+`AuthenticationMethods keyboard-interactive`
 
 
 
