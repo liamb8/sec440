@@ -1,8 +1,8 @@
 SSH Config:
 
-File: /etc/pam.d/sshd
+Open `/etc/pam.d/sshd` with sudo privileges, and add the following lines to the end of the file:
 
-`auth    required      pam_unix.so     no_warn try_first_pass`
+`auth    required      pam_unix.so     no_warn try_first_pass`   
 `auth    required      pam_google_authenticator.so`
 
 
@@ -18,7 +18,7 @@ ChallengeResponseAuthentication yes
 
 Replace example-user with a system user.
 
-`Match User example-user`
+`Match User example-user`   
 
 `AuthenticationMethods keyboard-interactive`
 
