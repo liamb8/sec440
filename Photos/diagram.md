@@ -1,1 +1,2 @@
-![](C:\Users\liam\Downloads\Copy of Week 2 -Architecture S19 (1).jpg)
+![https://imgur.com/a/0i2ZisA]()
+
