@@ -1,9 +1,8 @@
-```
-set interfaces ethernet eth0 address '10.0.17.21/24'
+set interfaces ethernet eth0 address '10.0.17.81/24'
 set interfaces ethernet eth0 description 'SEC440-WAN'
-set interfaces ethernet eth1 address '10.0.5.2/24'
+set interfaces ethernet eth1 address '10.0.5.3/24'
 set interfaces ethernet eth1 description 'LIAM-LAN'
-set interfaces ethernet eth2 address '10.0.6.2/24'
+set interfaces ethernet eth2 address '10.0.6.3/24'
 set interfaces ethernet eth2 description 'OPT-VRRP'
 set nat destination rule 10 description 'HTTP->WEB01'
 set nat destination rule 10 port '80'
@@ -29,7 +28,6 @@ set service dns forwarding listen-address '10.0.17.2'
 set service ssh listen-address '0.0.0.0'
 set service ssh listen-address '10.0.5.2'
 set service ssh listen-address '10.0.5.1'
-set system host-name 'vyos1-liam'
+set system host-name 'vyos2-liam'
 set system name-server '10.0.17.2'
-```
 
