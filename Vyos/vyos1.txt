@@ -1,4 +1,4 @@
-```
+```markdown
 set interfaces ethernet eth0 address '10.0.16.21/24'
 set interfaces ethernet eth0 description 'SEC440-WAN'
 set interfaces ethernet eth1 address '10.0.5.2/24'
