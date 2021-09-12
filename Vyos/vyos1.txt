@@ -1,4 +1,5 @@
-```set interfaces ethernet eth0 address '10.0.16.21/24'
+```
+set interfaces ethernet eth0 address '10.0.16.21/24'
 set interfaces ethernet eth0 description 'SEC440-WAN'
 set interfaces ethernet eth1 address '10.0.5.2/24'
 set interfaces ethernet eth1 description 'LIAM-LAN'
@@ -29,5 +30,6 @@ set service ssh listen-address '0.0.0.0'
 set service ssh listen-address '10.0.5.2'
 set service ssh listen-address '10.0.5.1'
 set system host-name 'vyos1-liam'
-set system name-server '10.0.17.2'```
+set system name-server '10.0.17.2'
+```
 
