@@ -9,19 +9,29 @@ app = Flask(__name__)
 
 # This information is obtained upon registration of a new GitHub OAuth
 # application here: https://github.com/settings/applications/new
+#client_id = "<your client key>"
+#client_secret = "<your client secret>"
+#authorization_base_url = 'https://github.com/login/oauth/authorize'
+#token_url = 'https://github.com/login/oauth/access_token'
 
 fileObject = open("creds.json", "r")
-jsoncontent = fileObject.read()
-creds = json.loads(jsoncontent)
+jsonContent = fileObject.read()
+creds = json.loads(jsonContent)
 client_id = creds['client_id']
 client_secret = creds['client_secret']
 authorization_base_url = creds['authorization_base_url']
-token_url= creds['token_url']
+token_url = creds['token_url']
+
+
+
+
+
 
 @app.route("/")
-def demo():
-    """Step 1: User Authorization.
 
+def demo():
+
+    """Step 1: User Authorization.
     Redirect the user/resource owner to the OAuth provider (i.e. Github)
     using an URL with a few key OAuth parameters.
     """
@@ -38,7 +48,6 @@ def demo():
 @app.route("/callback", methods=["GET"])
 def callback():
     """ Step 3: Retrieving an access token.
-
     The user has been redirected back from the provider to your registered
     callback URL. With this redirection comes an authorization code included
     in the redirect URL. We will use that to obtain an access token.
@@ -51,6 +60,7 @@ def callback():
     # At this point you can fetch protected resources but lets save
     # the token and show how this is done from a persisted token
     # in /profile.
+
     session['oauth_token'] = token
 
     return redirect(url_for('.profile'))
